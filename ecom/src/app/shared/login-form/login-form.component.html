@@ -1,0 +1,36 @@
+<div class="seller-auth">
+    <div class="signup">
+      <h1>Login</h1>
+      <form [formGroup]="loginForm" class="common-form" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <input
+            formControlName="email"
+            class="form-input"
+            type="email"
+            placeholder="Enter email"
+          />
+          <p *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+            EMail is required
+          </p>
+        </div>
+  
+        <!-- Price -->
+        <div class="form-group">
+          <input
+            formControlName="password"
+            class="form-input"
+            type="password"
+            placeholder="password"
+          />
+          <p *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+            Password is required
+          </p>
+        </div>
+        <button class="form-button" type="submit" [disabled]="loginForm.invalid">
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+  

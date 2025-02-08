@@ -1,0 +1,27 @@
+<nav class="nav">
+    <h1>
+        E-COMM
+    </h1>
+    <div class="nav-search">
+        <input type="text" placeholder="Search for Products">
+        <button>Search</button>
+    </div>
+    <ul>
+        <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Menu</a>
+            <ul class="dropdown-content">
+                <li><a routerLink="/seller-auth" routerLinkActive="active" ariaCurrentWhenActive="page">Seller</a></li>
+                <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">about</a></li>
+                @if (!authService.getToken()) {
+                    <li><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a></li>
+                }
+                @if (authService.getToken()) {
+                    <li><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="onLogout()">Logout</a></li>
+                }
+                <li><a routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page">Cart(0)</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

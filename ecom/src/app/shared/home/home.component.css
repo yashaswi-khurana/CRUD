@@ -1,0 +1,32 @@
+.app-card {
+    display: flex;
+    justify-content: flex-start; /* Align cards to the left initially */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    margin-top: 20px; /* Add space at the top of the container */
+}
+
+.app-card > * {
+    flex: 1 1 30%; /* Ensure each card takes 30% of the width by default */
+    margin: 10px; /* Adds margin between cards */
+    box-sizing: border-box; /* Ensures padding and margin are included in width */
+    min-width: 280px; /* Prevents the card from becoming too narrow */
+}
+
+@media (max-width: 768px) {
+    .app-card {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Align the cards in the center */
+    }
+
+    .app-card > * {
+        flex: 1 1 100%; /* Cards take full width on small screens */
+        margin: 10px 0; /* Vertical spacing between cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .app-card > * {
+        flex: 1 1 100%; /* Ensure cards take full width on very small screens */
+        margin: 5px 0; /* Reduced margin on very small screens */
+    }
+}

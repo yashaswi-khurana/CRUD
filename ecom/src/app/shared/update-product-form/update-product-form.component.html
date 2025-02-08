@@ -1,0 +1,54 @@
+<div class="seller-auth">
+  <div class="signup">
+    <h1>Update Product</h1>
+    <p>Updating Product with ID: {{ id }}</p>
+    <form [formGroup]="updateProduct" class="common-form" (ngSubmit)="onSubmit()">
+      <!-- name -->
+      <div class="form-group">
+        <input
+          formControlName="name"
+          class="form-input"
+          type="text"
+          placeholder="name"
+        />
+      </div>
+
+      <!-- description -->
+      <div class="form-group">
+        <input
+          formControlName="description"
+          class="form-input"
+          type="text"
+          placeholder="discription"
+        />
+      </div>
+
+      <!-- qty -->
+      <div class="form-group">
+        <input
+          formControlName="qty"
+          class="form-input"
+          type="number"
+          placeholder="Quantity"
+        />
+      </div>
+
+      <!-- price -->
+      <div class="form-group">
+        <input
+          formControlName="price"
+          class="form-input"
+          type="number"
+          placeholder="Price"
+        />
+      </div>
+
+      <button
+        class="form-button"
+        type="submit"
+        [disabled]="updateProduct.invalid">
+        Update Product
+      </button>
+    </form>
+  </div>
+</div>

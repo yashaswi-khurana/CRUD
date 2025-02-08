@@ -1,0 +1,142 @@
+.card {
+    border: 1px solid #ddd;  /* Lighter border for a cleaner look */
+    width: 300px;  /* Fixed width for consistency */
+    height: 350px; /* Fixed height for the card */
+    padding: 15px; /* Adjust padding to fit the content neatly */
+    box-sizing: border-box; /* Include padding in the total size */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure proper spacing between elements */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    background-color: #fff; /* Clean white background */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out;
+    margin-top: 20px; /* Smooth hover effect */
+    margin-right: 20px; /* Smooth hover effect */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover for a dynamic effect */
+}
+
+.product-image {
+    height: 120px; /* Set a fixed height for the product image section */
+    background-color: #f0f0f0; /* Placeholder background */
+    margin-bottom: 10px; /* Space between the image and content */
+    border-radius: 5px; /* Rounded corners for the image */
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start aligning from the top */
+    flex-grow: 1; /* Allow content to take available space */
+    overflow: hidden; /* Prevent overflow of content */
+    height: 180px; /* Fixed height for content section */
+}
+
+.content-scrollable {
+    overflow-y: auto; /* Enable vertical scrolling for overflow content */
+    max-height: 120px; /* Set a max height for the scrollable content */
+}
+
+.name p {
+    font-size: 16px; /* Slightly larger text for product name */
+    font-weight: bold; /* Make the name stand out */
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark color for better readability */
+}
+
+.name p:last-child {
+    font-size: 14px; /* Smaller font for the description */
+    color: #666; /* Lighter color for the description */
+}
+
+.stats p {
+    font-size: 14px; 
+    margin: 4px 0; 
+    color: #444; 
+}
+
+.stats p:first-child {
+    font-weight: bold; 
+}
+
+button {
+    padding: 8px 8px;
+    font-size: 12px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darkviolet;
+}
+
+/* Add Card Component */
+.app-add-card {
+    margin-top: 20px; /* Space above the add card component */
+    display: block; /* Ensure the add card component is a block element */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .card {
+        width: 280px; /* Adjust card width for medium screens */
+        height: auto; /* Let height adjust according to content */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Make the card take full width */
+        margin-right: 0; /* Remove right margin for full width */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .product-image {
+        height: 100px; /* Adjust image height on smaller screens */
+    }
+
+    .name p {
+        font-size: 14px; /* Smaller text for name on smaller screens */
+    }
+
+    .name p:last-child {
+        font-size: 12px; /* Smaller description text */
+    }
+
+    .stats p {
+        font-size: 12px; /* Smaller stats text */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width on very small screens */
+        height: auto; /* Let height adjust based on content */
+    }
+
+    .product-image {
+        height: 80px; /* Further reduce image size */
+    }
+
+    .name p {
+        font-size: 12px; /* Smaller text for name */
+    }
+
+    .name p:last-child {
+        font-size: 10px; /* Smaller description text */
+    }
+
+    .stats p {
+        font-size: 10px; /* Smaller stats text */
+    }
+}

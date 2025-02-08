@@ -1,0 +1,87 @@
+<div class="seller-auth">
+  <div class="signup">
+    <h1>Seller Sign-Up</h1>
+    <form [formGroup]="signupForm" class="common-form" (ngSubmit)="onSubmit()">
+      <!-- User Name -->
+      <div class="form-group">
+        <input
+          formControlName="user_Name"
+          class="form-input"
+          type="text"
+          placeholder="Enter User Name"
+        />
+        @if(signupForm.get('name')?.invalid && signupForm.get('name')?.touched){
+          <p>User Name is required</p>
+        }
+      </div>
+
+      <!-- First Name -->
+      <div class="form-group">
+        <input
+          formControlName="first_Name"
+          class="form-input"
+          type="text"
+          placeholder="Enter First Name"
+        />
+        @if(signupForm.get('firstName')?.invalid && signupForm.get('firstName')?.touched){
+          <p>First Name is required</p>
+        }
+      </div>
+
+      <!-- Middle Name -->
+      <div class="form-group">
+        <input
+          formControlName="middle_Name"
+          class="form-input"
+          type="text"
+          placeholder="Enter Middle Name"
+        />
+      </div>
+
+      <!-- Last Name -->
+      <div class="form-group">
+        <input
+          formControlName="last_Name"
+          class="form-input"
+          type="text"
+          placeholder="Enter Last Name"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <input
+          formControlName="password"
+          class="form-input"
+          type="password"
+          placeholder="Enter Password"
+        />
+        @if(signupForm.get('password')?.invalid && signupForm.get('password')?.touched){
+          <p>Password is required and must be at least 6 characters long</p>
+        }
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <input
+          formControlName="email"
+          class="form-input"
+          type="email"
+          placeholder="Enter Email"
+        />
+        @if(signupForm.get('email')?.invalid && signupForm.get('email')?.touched){
+          <p>Please enter a valid email</p>
+        }
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        class="form-button"
+        type="submit"
+        [disabled]="signupForm.invalid"
+      >
+        SignUp
+      </button>
+    </form>
+  </div>
+</div>

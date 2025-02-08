@@ -1,0 +1,62 @@
+<div class="seller-auth">
+  <div class="signup">
+    <h1>Add Product</h1>
+    <form [formGroup]="addProduct" class="common-form" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <div class="form-group">
+        <input
+          formControlName="name"
+          class="form-input"
+          type="text"
+          placeholder="Product Name"
+        />
+        <p *ngIf="addProduct.get('name')?.invalid && addProduct.get('name')?.touched">
+          Product Name is required
+        </p>
+      </div>
+
+      <!-- Description -->
+      <div class="form-group">
+        <input
+          formControlName="description"
+          class="form-input"
+          type="text"
+          placeholder="Enter description"
+        />
+        <p *ngIf="addProduct.get('description')?.invalid && addProduct.get('description')?.touched">
+          Description is required
+        </p>
+      </div>
+
+      <!-- Quantity -->
+      <div class="form-group">
+        <input
+          formControlName="qty"
+          class="form-input"
+          type="number"
+          placeholder="Quantity"
+        />
+        <p *ngIf="addProduct.get('qty')?.invalid && addProduct.get('qty')?.touched">
+          Quantity is required and must be greater than 0
+        </p>
+      </div>
+
+      <!-- Price -->
+      <div class="form-group">
+        <input
+          formControlName="price"
+          class="form-input"
+          type="number"
+          placeholder="Price"
+        />
+        <p *ngIf="addProduct.get('price')?.invalid && addProduct.get('price')?.touched">
+          Price is required and must be greater than 0
+        </p>
+      </div>
+
+      <button class="form-button" type="submit" [disabled]="addProduct.invalid">
+        Add Product
+      </button>
+    </form>
+  </div>
+</div>

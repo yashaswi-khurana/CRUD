@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Mouse",
+    "description": "A sleek and ergonomic wireless mouse.",
+    "qty": 1,
+    "price": 25.99
+  },
+  {
+    "id": 2,
+    "name": "Gaming Keyboard",
+    "description": "Mechanical keyboard with RGB lighting.",
+    "qty": 75,
+    "price": 59.99
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Speaker",
+    "description": "Portable speaker with deep bass.",
+    "qty": 100,
+    "price": 49.99
+  },
+  {
+    "id": 4,
+    "name": "Headphones",
+    "description": "Noise-canceling headphones with excellent sound quality.",
+    "qty": 50,
+    "price": 99.99
+  },
+  {
+    "id": 5,
+    "name": "Laptop",
+    "description": "Lightweight and powerful laptop with a long battery life.",
+    "qty": 20,
+    "price": 1299.99
+  },
+  {
+    "id": 6,
+    "name": "Smartwatch",
+    "description": "Fitness tracker with a stylish design.",
+    "qty": 120,
+    "price": 149.99
+  },
+  {
+    "id": 7,
+    "name": "Tablet",
+    "description": "High-resolution display with a sleek and portable design.",
+    "qty": 30,
+    "price": 399.99
+  },
+  {
+    "id": 8,
+    "name": "External Hard Drive",
+    "description": "Large capacity external hard drive for data storage.",
+    "qty": 15,
+    "price": 79.99
+  },
+  {
+    "id": 9,
+    "name": "Camera",
+    "description": "Digital camera with high-quality image and video capture.",
+    "qty": 10,
+    "price": 499.99
+  },
+  {
+    "id": 10,
+    "name": "Game Console", 
+    "description": "Powerful gaming console with a vast library of games.",
+    "qty": 8,
+    "price": 299.99
+  }
+]
